@@ -28,6 +28,11 @@ import Product from '../models/Product.js';
         return res.status(201).json(product);
 
     }
+    async index(req, res) {
+      const products = await Product.findAll();
+      
+      return res.json(products);
+    }
  }
 
  export default new ProductController();
