@@ -26,7 +26,6 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull:!false,
       },
-
       admin:{
         type:Sequelize.BOOLEAN,
         defaultValue:false,
@@ -39,13 +38,10 @@ module.exports = {
       type: Sequelize.DATE,
       allowNull:false
       }
-    
     });
-
   },
 
   async down(queryInterface) {
-     await queryInterface.dropTable('users');
-     
+    await queryInterface.dropTable('users');    
   }
 };

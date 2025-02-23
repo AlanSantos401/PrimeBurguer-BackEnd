@@ -7,7 +7,7 @@ module.exports ={
     database: 'devburger',
     define:{
         timestamps:true,
-        underscored:true,
+         underscored:true,
         underscoredAll:true,
-    }
-}
+        }
+};
