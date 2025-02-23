@@ -6,7 +6,6 @@ import Sequelize, { Model } from "sequelize";
             {
                name: Sequelize.STRING,
                price: Sequelize.INTEGER,
-               category: Sequelize.STRING,
                path: Sequelize.STRING,
                url: {
                 type: Sequelize.VIRTUAL,
@@ -19,6 +18,15 @@ import Sequelize, { Model } from "sequelize";
                sequelize,
             }
         );
+
+        return this;
+    }
+    
+    static associate(models) {
+        this.belongsTo(models.Category, {
+          foreignKey: 'category_id',
+          as: 'category',
+        });
     }
 }
 

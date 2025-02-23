@@ -10,7 +10,10 @@ import Sequelize, { Model } from "sequelize";
                sequelize,
             }
         );
+
+        return this;
     }
+
 }
 
 export default Category;
