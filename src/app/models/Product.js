@@ -7,6 +7,7 @@ import Sequelize, { Model } from "sequelize";
                name: Sequelize.STRING,
                price: Sequelize.INTEGER,
                path: Sequelize.STRING,
+               offer: Sequelize.BOOLEAN,
                url: {
                 type: Sequelize.VIRTUAL,
                 get() {
