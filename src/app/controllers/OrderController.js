@@ -28,7 +28,7 @@ class OrderController {
         const productsIds = products.map((product) => product.id);
 
         const findProducts = await Product.findAll({
-            were: {
+            where: {
                 id: productsIds,
             },
             include: {
